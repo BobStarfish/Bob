@@ -2,31 +2,54 @@
 <html lang="en" >
 <head>
   <meta charset="UTF-8">
-  <title>公佈欄加輪播</title>
+  <title>final_1</title>
   <link rel="stylesheet" href="./style.css">
 
 </head>
 <body>
 <!-- partial:index.partial.html -->
-<body onLoad="show()">
-    <div id="ncyu">
-    <a href="https://www.klook.com/zh-TW/event-detail/101027903-2025-nmixx-taipei-concert/" target= "_blank"><img id="ico"></a>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NCYU 公佈欄</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body onLoad="show(); loadNews();">
+    <div id="header">
+        <h1> 搶到票 </h1>
+     <p id="gg">搶的到嗎</p>
+<button onclick="ncyu()">請按一下</button>
     </div>
-<h2>NCYU公佈欄</h2>
-<h3>標題</h3>
-<input type="text" id="title" size="50"></input>
-<h3>内容</h3>
-<textarea id="content" cols="50" rows="8"></textarea>
-<br>
 
-<button id="btn">送出</button>
-<div id="list">
-<div id="news">
-<h2>期末考重要訊息</h2>
-<p>全校期未考全面A11 Pass !</p><hr>
-</div>
-</div>
+    <div id="ncyu">
+        <a href="https://www.klook.com/zh-TW/event-detail/101027903-2025-nmixx-taipei-concert/" target="_blank">
+            <img id="ico">
+        </a>
+    </div>
+
+    <div class="container">
+        <h3>新增公告</h3>
+        <input type="text" id="title" size="50" placeholder="輸入標題">
+        <textarea id="content" cols="50" rows="8" placeholder="輸入內容"></textarea>
+        <button id="btn">送出公告</button>
+    </div>
+
+    <div class="container">
+        <button id="themeToggle"> 切換主題</button>
+        <input type="text" id="search" placeholder=" 搜尋公告">
+    </div>
+
+    <div id="list"></div>
+
+    <div class="intro-box">
+        <h3>自我介紹</h3>
+        <p>你好！我是方柏勳，一名心理醫師，兼湖人隊前總教練。</p>
+    </div>
+
+    <script src="script.js"></script>
 </body>
+</html>
 <!-- partial -->
   <script  src="./script.js"></script>
 
